@@ -5,7 +5,7 @@ if(isset($_POST ['login'])){
   $login_email = $_POST['lemail'];
   $login_pass = $_POST['lpass'];
 
-  $query = "SELECT * from work where lemail ='$login_email'";
+  $query = "SELECT * from work where email ='$login_email'";
   $conn = mysqli_query($connect, $query);
   if(mysqli_num_rows($conn) > 0){
     $row = mysqli_fetch_assoc($conn);
